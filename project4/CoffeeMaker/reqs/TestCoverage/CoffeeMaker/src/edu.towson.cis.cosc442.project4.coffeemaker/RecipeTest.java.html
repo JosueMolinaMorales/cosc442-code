@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>RecipeTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">edu.towson.cis.cosc442.project4.coffeemaker (Mar 31, 2023 3:33:28 PM)</a> &gt; <a href="../../index.html" class="el_group">CoffeeMaker</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc442.project4.coffeemaker</a> &gt; <span class="el_source">RecipeTest.java</span></div><h1>RecipeTest.java</h1><pre class="source lang-java linenums">package edu.towson.cis.cosc442.project4.coffeemaker;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+<span class="fc" id="L9">public class RecipeTest {</span>
+	private Recipe r1;
+	@Before
+	public void setUp() throws Exception {
+<span class="fc" id="L13">		r1 = new Recipe();</span>
+<span class="fc" id="L14">		r1.setAmtChocolate(15);</span>
+<span class="fc" id="L15">		r1.setAmtCoffee(15);</span>
+<span class="fc" id="L16">		r1.setAmtMilk(15);</span>
+<span class="fc" id="L17">		r1.setAmtSugar(15);</span>
+<span class="fc" id="L18">		r1.setName(&quot;Coffee&quot;);</span>
+<span class="fc" id="L19">		r1.setPrice(50);</span>
+<span class="fc" id="L20">	}</span>
+
+	@After
+	public void tearDown() throws Exception {
+<span class="fc" id="L24">	}</span>
+
+	@Test
+	public void testGetAmtChocolate() {
+<span class="fc" id="L28">		assertEquals(15, r1.getAmtChocolate());</span>
+<span class="fc" id="L29">	}</span>
+
+	@Test
+	public void testSetAmtChocolate() {
+<span class="fc" id="L33">		r1.setAmtChocolate(10);</span>
+<span class="fc" id="L34">		assertEquals(10, r1.getAmtChocolate());</span>
+<span class="fc" id="L35">	}</span>
+
+	@Test
+	public void testSetAmtChocolateSetsToZero() {
+<span class="fc" id="L39">		r1.setAmtChocolate(-10);</span>
+<span class="fc" id="L40">		assertEquals(0, r1.getAmtChocolate());</span>
+<span class="fc" id="L41">	}</span>
+
+	@Test
+	public void testGetAmtCoffee() {
+<span class="fc" id="L45">		assertEquals(15, r1.getAmtChocolate());</span>
+<span class="fc" id="L46">	}</span>
+
+	@Test
+	public void testSetAmtCoffee() {
+<span class="fc" id="L50">		r1.setAmtCoffee(10);</span>
+<span class="fc" id="L51">		assertEquals(10, r1.getAmtCoffee());</span>
+<span class="fc" id="L52">	}</span>
+
+	@Test
+	public void testSetAmtCoffeeSetsToZero() {
+<span class="fc" id="L56">		r1.setAmtCoffee(-10);</span>
+<span class="fc" id="L57">		assertEquals(0, r1.getAmtCoffee());</span>
+<span class="fc" id="L58">	}</span>
+
+	@Test
+	public void testGetAmtMilk() {
+<span class="fc" id="L62">		assertEquals(15, r1.getAmtMilk());</span>
+<span class="fc" id="L63">	}</span>
+
+	@Test
+	public void testSetAmtMilk() {
+<span class="fc" id="L67">		r1.setAmtMilk(10);</span>
+<span class="fc" id="L68">		assertEquals(10, r1.getAmtMilk());</span>
+<span class="fc" id="L69">	}</span>
+
+	@Test
+	public void testSetAmtMilkSetsToZero() {
+<span class="fc" id="L73">		r1.setAmtMilk(-10);</span>
+<span class="fc" id="L74">		assertEquals(0, r1.getAmtMilk());</span>
+<span class="fc" id="L75">	}</span>
+
+	@Test
+	public void testGetAmtSugar() {
+<span class="fc" id="L79">		assertEquals(15, r1.getAmtSugar());</span>
+<span class="fc" id="L80">	}</span>
+
+	@Test
+	public void testSetAmtSugar() {
+<span class="fc" id="L84">		r1.setAmtSugar(10);</span>
+<span class="fc" id="L85">		assertEquals(10, r1.getAmtSugar());</span>
+<span class="fc" id="L86">	}</span>
+
+	@Test
+	public void testSetAmtSugarSetsToZero() {
+<span class="fc" id="L90">		r1.setAmtSugar(-10);</span>
+<span class="fc" id="L91">		assertEquals(0, r1.getAmtSugar());</span>
+<span class="fc" id="L92">	}</span>
+
+	@Test
+	public void testGetName() {
+<span class="fc" id="L96">		assertEquals(&quot;Coffee&quot;, r1.getName());</span>
+<span class="fc" id="L97">	}</span>
+
+	@Test
+	public void testSetName() {
+<span class="fc" id="L101">		r1.setName(&quot;Tea&quot;);</span>
+<span class="fc" id="L102">		assertEquals(&quot;Tea&quot;, r1.getName());</span>
+<span class="fc" id="L103">	}</span>
+
+	@Test
+	public void testGetPrice() {
+<span class="fc" id="L107">		assertEquals(50, r1.getPrice());</span>
+<span class="fc" id="L108">	}</span>
+
+	@Test
+	public void testSetPrice() {
+<span class="fc" id="L112">		r1.setPrice(10);</span>
+<span class="fc" id="L113">		assertEquals(10, r1.getPrice());</span>
+<span class="fc" id="L114">	}</span>
+
+	@Test
+	public void testSetPriceSetToZero() {
+<span class="fc" id="L118">		r1.setPrice(-10);</span>
+<span class="fc" id="L119">		assertEquals(0, r1.getPrice());</span>
+<span class="fc" id="L120">	}</span>
+
+	@Test
+	public void testEqualsObject() {
+<span class="fc" id="L124">		Recipe r2 = new Recipe();</span>
+<span class="fc" id="L125">		r2.setAmtChocolate(15);</span>
+<span class="fc" id="L126">		r2.setAmtCoffee(15);</span>
+<span class="fc" id="L127">		r2.setAmtMilk(15);</span>
+<span class="fc" id="L128">		r2.setAmtSugar(15);</span>
+<span class="fc" id="L129">		r2.setName(&quot;Coffee&quot;);</span>
+<span class="fc" id="L130">		r2.setPrice(50);</span>
+<span class="fc" id="L131">		assertTrue(r1.equals(r2));</span>
+<span class="fc" id="L132">	}</span>
+
+	@Test
+	public void testEqualsObjectReturnsFalse() {
+<span class="fc" id="L136">		Recipe r2 = new Recipe();</span>
+<span class="fc" id="L137">		r2.setAmtChocolate(15);</span>
+<span class="fc" id="L138">		r2.setAmtCoffee(15);</span>
+<span class="fc" id="L139">		r2.setAmtMilk(15);</span>
+<span class="fc" id="L140">		r2.setAmtSugar(15);</span>
+<span class="fc" id="L141">		r2.setName(&quot;Tea&quot;);</span>
+<span class="fc" id="L142">		r2.setPrice(50);</span>
+<span class="fc" id="L143">		assertFalse(r1.equals(r2));</span>
+<span class="fc" id="L144">	}</span>
+
+	@Test
+	public void testToString() {
+<span class="fc" id="L148">		String expected = &quot;Coffee&quot;;</span>
+<span class="fc" id="L149">		assertEquals(expected, r1.toString());</span>
+<span class="fc" id="L150">	}</span>
+
+	@Test
+	public void testEqualsObjectReturnFalseForNull() {
+<span class="fc" id="L154">		assertFalse(r1.equals(null));</span>
+<span class="fc" id="L155">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span>edu.towson.cis.cosc442.project4.coffeemaker (Mar 31, 2023 3:33:28 PM)</div></body></html>

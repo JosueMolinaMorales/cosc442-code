@@ -1,0 +1,14 @@
+
+# Bug 1: VendingMachineItem's name can be null
+In the constructor for VendingMachineItem, there is no null check for the name of the item
+This would allow a user to send null and it can be stored.
+An Excpetion should be thrown to prevent this from happening.
+
+# Bug 2: VendingMachine's item can be null
+In addItem() of VendingMachineItem, there is no null check for the item
+This would allow a user to send null and it can be stored.
+An Exception should be thrown to prevent this from happening
+
+# Bug 3: VendingMachine's slot can be null
+In the getSlotItem() method, null can be passed into the method causing a NullPointerException
+This would crash the program anytime the user passes in null to the program
